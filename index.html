@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El ahorcado</title>
+    <link rel="shortcut icon" href="./Img/palanca-de-mando.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css">
+</head>
+
+<body id="body">
+    <header>
+        <div>
+            <img id="logo " src="./Img/Vector.png" alt="">
+
+        </div>
+        <div id="titulo">
+            <H1>ALURA CHALLENGE 2</H1>
+
+        </div>
+    </header>
+    <main>
+        <div id="menu">
+            <button id="btnGame">Jugar!</button>
+            <button id="btnAdd">Agregar palabras</button>
+
+        </div>
+        <div id="game" class="ocultar">
+            <div id="ahorcado">
+
+                <div id="muñeco">
+                    <div id="imagenes">
+
+                    </div>
+
+                    <div id="mensaje">
+
+                    </div>
+
+
+
+                </div>
+                <div id="palabras">
+
+
+
+                </div>
+                <input autofocus type="text" name="" id="eventoTeclado" placeholder="Ingrese aca las letras">
+                <div id="equivocadas">
+
+                </div>
+                <div id="botones">
+                    <button id="btnNewGame">Nuevo Juego</button>
+                    <button id="btnCancelGame">Desistir</button>
+                </div>
+            </div>
+        </div>
+        <div id="agregarPalabra" class="ocultar">
+            <div>
+                <label id="new" for="new">Ingrese la nueva palabra</label>
+                <input type="text" name="new" id="nuevaPalabra">
+
+            </div>
+            <button id="btnAgregarPalabra">Agregar</button>
+        </div>
+
+
+        <script src="./Js/elegirPalabra.js "></script>
+        <script src="https://kit.fontawesome.com/f6f899d5f4.js" crossorigin="anonymous"></script>
+
+    </main>
+    <footer>
+        <a id="linklin" href="https://www.linkedin.com/in/martin-fernandez-1b1965220/"><i  class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i  class="fa-brands fa-github"><a href=""></i></a>
+
+
+        <a href="https://www.aluracursos.com/challenges/oracle-one/semana03y04-crea-tu-propio-juego-del-ahorcado-con-javascript"><i  class="fa-solid fa-circle-book-open"></i></a>
+
+
+
+    </footer>
+</body>
+
+</html>
