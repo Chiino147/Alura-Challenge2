@@ -21,6 +21,10 @@
     font-size: 34px;
 }
 
+#virtual-keyboard {
+    display: none;
+}
+
 #btnAgregarPalabra {
     width: 200px;
     height: 50px;
@@ -72,6 +76,13 @@ header img {
     height: 500px;
 }
 
+.footerImg:hover {
+    font-size: 30px;
+    transition: 0.6s;
+    opacity: 0.9;
+    color: #5a5a5a;
+}
+
 #btnGame {
     width: 300px;
     height: 100px;
@@ -82,6 +93,26 @@ header img {
     border: none;
     color: rgba(255, 255, 255, 0.795);
     background-color: #0A3871;
+}
+
+#btnGame:hover {
+    font-size: 40px;
+    transition: 0.6s;
+    opacity: 0.9;
+    color: #fffd71;
+}
+
+#btnCancelGame:hover {
+    font-size: 25px;
+    transition: 0.6s;
+    opacity: 0.9;
+    color: #d62109;
+}
+
+#btnNewGame:hover {
+    transition: 0.6s;
+    opacity: 0.9;
+    color: #fd4a4a;
 }
 
 #btnAdd {
@@ -225,6 +256,28 @@ footer {
     color: white;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+#virtual-keyboard {
+    display: none;
+}
+
+.keyboard-row {
+    width: 100%;
+}
+
+.board {
+    margin-left: 800px;
+}
+
+.footerImg {
+    color: white;
+    font-size: 25px;
+    margin-right: 0;
+    text-align: center;
+    align-items: center;
+    margin: 6px;
 }
 
 #eventoTeclado {
@@ -234,6 +287,28 @@ footer {
 
 @media screen and (min-width:320px) and (max-width: 480px) {
     /*-------------CELULARES------------*/
+    #virtual-keyboard {
+        display: block;
+        width: 60vh;
+        height: 18vh;
+        margin-top: 200px;
+    }
+    .keyboard-row {
+        display: block;
+        margin-top: 30px;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .botonVirtual {
+        padding: 10px;
+        width: 4vh;
+        margin: 5px;
+        border: 2px black solid;
+        font-family: Arial;
+        color: #000000;
+        text-decoration: none;
+    }
     header {
         width: 60vh;
         height: 10vh;
@@ -243,11 +318,10 @@ footer {
         border-radius: 20%;
     }
     #mostrarMuñeco {
-        margin: 0;
+        margin-left: 15%;
         padding: 0;
-        height: 50vh;
-        max-width: 60vh;
-        height: auto;
+        max-width: 30vh;
+        height: 35vh;
     }
     .conteiner {
         margin: px auto;
@@ -255,10 +329,10 @@ footer {
         width: 8vh;
     }
     #eventoTeclado {
-        opacity: 100%;
+        display: none;
         padding: 0px;
         margin-left: 8vh;
-        height: 30px;
+        height: 0px;
         width: 40vh;
         font-size: 35px;
         border: #0A3871 2px solid;
@@ -268,7 +342,7 @@ footer {
         align-items: center;
         margin: 3px auto;
         padding: 0px;
-        width: 60vh;
+        max-width: 60vh;
         height: 8vh;
         display: flex;
         flex-direction: row;
@@ -292,9 +366,9 @@ footer {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 60vh;
+        max-width: 60vh;
         margin: 10px 0px;
-        max-width: 52vh;
+        height: 9vh;
         border: #0A3871 1px solid;
         border-radius: 30px;
     }
@@ -302,15 +376,34 @@ footer {
         height: 5vh;
     }
     .letraEquivocada {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
     }
 }
 
 @media screen and (min-width:768px) and (max-width: 1024px) {
     /*-------------Tablets------------*/
-    * {
-        background-color: #535353;
+    #virtual-keyboard {
+        display: block;
+        width: 60vh;
+        height: 18vh;
+        margin-top: 0px;
+    }
+    .keyboard-row {
+        display: block;
+        margin-top: 30px;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .botonVirtual {
+        padding: 10px;
+        width: 4vh;
+        margin: 5px;
+        border: 2px black solid;
+        font-family: Arial;
+        color: #000000;
+        text-decoration: none;
     }
     header {
         width: 100vh;
@@ -321,20 +414,20 @@ footer {
         border-radius: 20%;
     }
     #mostrarMuñeco {
-        margin: 0;
+        margin-left: 20vh;
         padding: 0;
         height: 50vh;
-        max-width: 100vh;
-        height: auto;
+        max-width: 20vh;
+        height: 20vh;
         background-color: aliceblue;
     }
     .conteiner {
-        margin: px auto;
-        height: 10vh;
+        margin: 1px auto;
+        height: 4vh;
         width: 8vh;
     }
     #eventoTeclado {
-        opacity: 100%;
+        display: none;
         padding: 0px;
         margin: auto 15vh;
         height: 35px;
@@ -345,7 +438,7 @@ footer {
     }
     #botones {
         align-items: center;
-        margin: 3px auto;
+        margin: 3px 1vh;
         padding: 0px;
         width: 60vh;
         height: 8vh;
@@ -371,18 +464,18 @@ footer {
         justify-content: center;
         align-items: center;
         text-align: center;
-        height: 15vh;
-        width: 60vh;
-        margin: 10px auto;
-        max-width: 100vh;
+        max-width: 60vh;
+        margin: 10px 0px;
+        height: 9vh;
         border: #0A3871 1px solid;
         border-radius: 30px;
     }
     #equivocadas {
-        height: 5vh;
+        height: 3vh;
+        max-width: 60vh;
     }
     .letraEquivocada {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
     }
 }

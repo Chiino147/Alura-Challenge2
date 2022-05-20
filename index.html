@@ -23,6 +23,7 @@
         </div>
     </header>
     <main>
+
         <div id="menu">
             <button id="btnGame">Jugar!</button>
             <button id="btnAdd">Agregar palabras</button>
@@ -66,18 +67,69 @@
             </div>
             <button id="btnAgregarPalabra">Agregar</button>
         </div>
+        <div id="virtual-keyboard">
 
+            <div class="keyboard-row">
+                <a href="#" class="botonVirtual" id="Q" onclick="celular(id)">Q</a>
+                <a href="#" class="botonVirtual" id="W" onclick="celular(id)">W</a>
+                <a href="#" class="botonVirtual" id="E" onclick="celular(id)">E</a>
+                <a href="#" class="botonVirtual" id="R" onclick="celular(id)">R</a>
+                <a href="#" class="botonVirtual" id="T" onclick="celular(id)">T</a>
+                <a href="#" class="botonVirtual" id="Y" onclick="celular(id)">Y</a>
+                <a href="#" class="botonVirtual" id="U" onclick="celular(id)">U</a>
+                <a href="#" class="botonVirtual" id="I" onclick="celular(id)">I</a>
+                <a href="#" class="botonVirtual" id="O" onclick="celular(id)">O</a>
+                <a href="#" class="botonVirtual" id="P" onclick="celular(id)">P</a>
+            </div>
+            <div class="keyboard-row">
+                <a href="#" class="botonVirtual" id="A" onclick="celular(id)">A</a>
+                <a href="#" class="botonVirtual" id="S" onclick="celular(id)">S</a>
+                <a href="#" class="botonVirtual" id="D" onclick="celular(id)">D</a>
+                <a href="#" class="botonVirtual" id="F" onclick="celular(id)">F</a>
+                <a href="#" class="botonVirtual" id="G" onclick="celular(id)">G</a>
+                <a href="#" class="botonVirtual" id="H" onclick="celular(id)">H</a>
+                <a href="#" class="botonVirtual" id="J" onclick="celular(id)">J</a>
+                <a href="#" class="botonVirtual" id="K" onclick="celular(id)">K</a>
+                <a href="#" class="botonVirtual" id="L" onclick="celular(id)">L</a>
+                <a href="#" class="botonVirtual" id="Ñ" onclick="celular(id)">Ñ</a>
+            </div>
+            <div class="keyboard-row">
+                <a href="#" class="botonVirtual" id="Z" onclick="celular(id)">Z</a>
+                <a href="#" class="botonVirtual" id="X" onclick="celular(id)">X</a>
+                <a href="#" class="botonVirtual" id="C" onclick="celular(id)">C</a>
+                <a href="#" class="botonVirtual" id="V" onclick="celular(id)">V</a>
+                <a href="#" class="botonVirtual" id="B" onclick="celular(id)">B</a>
+                <a href="#" class="botonVirtual" id="N" onclick="celular(id)">N</a>
+                <a href="#" class="botonVirtual" id="M" onclick="celular(id)">M</a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+                $("#virtual-keyboard a").on('click', function() {
+                    if ($(this).attr('data') == 'DEL') {
+                        board_text = $('textarea.board').text();
+                        board_text = board_text.substring(0, board_text.length - 1);
+                        $('textarea.board').text(board_text);
+                    } else {
+                        $('textarea.board').text($('textarea.board').text() + $(this).attr('data'));
+                    }
+                });
+            });
+        </script>
 
         <script src="./Js/elegirPalabra.js "></script>
         <script src="https://kit.fontawesome.com/f6f899d5f4.js" crossorigin="anonymous"></script>
 
     </main>
     <footer>
-        <a id="linklin" href="https://www.linkedin.com/in/martin-fernandez-1b1965220/"><i  class="fa-brands fa-linkedin"></i></a>
-        <a href=""><i  class="fa-brands fa-github"><a href=""></i></a>
+        <a class="footerImg" target="_blank" href="https://www.linkedin.com/in/martin-fernandez-1b1965220/"><i  class="fa-brands fa-linkedin"></i></a>
+        <a class="footerImg" target="_blank" href="https://github.com/Chiino147/Alura-Challenge2"><i  class="fa-brands fa-github"></i></a>
+        <a class="footerImg" target="_blank" href="https://www.aluracursos.com/challenges/oracle-one/semana03y04-crea-tu-propio-juego-del-ahorcado-con-javascript"><i class="fa-solid fa-book"></i></a>
 
 
-        <a href="https://www.aluracursos.com/challenges/oracle-one/semana03y04-crea-tu-propio-juego-del-ahorcado-con-javascript"><i  class="fa-solid fa-circle-book-open"></i></a>
 
 
 

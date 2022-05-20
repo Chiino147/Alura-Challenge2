@@ -18,7 +18,51 @@ var partida = {
 
 
 
+function celular(input) {
+    cad = ``
 
+    console.log(input)
+
+    var encontro = false
+
+    if (partida.rejugar == true) {
+        console.log("Se vuelve a rejugar")
+        partida.vidas = 9
+        partida.intentos = 0
+        document.getElementById("imagenes").innerHTML = ``
+        partida.arrayletras = []
+        partida.rejugar = false
+    }
+
+    if ((partida.vidas > 0) && (partida.gano != true)) {
+        encontro = buscarLetra(partida, input)
+
+        if (!encontro) {
+            partida.intentos++;
+            partida.vidas--;
+            mostrarIntentos(input, partida)
+        }
+    }
+    if (partida.gano == true) {
+        return 0
+    }
+    if (partida.vidas == false) {
+        alert(`Perdiste! la palabra era: ${partida.palabra}`)
+        return 0
+    }
+
+    document.querySelector(".board").value = ""
+
+
+
+
+
+
+
+
+
+    return 0
+}
 
 
 
@@ -28,7 +72,8 @@ teclado.addEventListener("keydown", function(e) {
     var input = e.key
     input = input.toUpperCase();
     var encontro = false
-    document.getElementById("eventoTeclado").value = "";
+
+
 
     if (partida.rejugar == true) {
         console.log("Se vuelve a rejugar")
