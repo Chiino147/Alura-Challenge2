@@ -9,7 +9,8 @@ var partida = {
     palabra: "",
     arrayletras: [],
     rejugar: false,
-    letraIncorrectas: []
+    letraIncorrectas: [],
+    letrasPresionadas: []
 
 }
 
@@ -31,16 +32,19 @@ function celular(input) {
         partida.intentos = 0
         document.getElementById("imagenes").innerHTML = ``
         partida.arrayletras = []
+        partida.letrasPresionadas = []
         partida.rejugar = false
     }
+    if (!partida.letrasPresionadas.includes(input)) {
+        partida.letrasPresionadas.push(input)
+        if ((partida.vidas > 0) && (partida.gano != true)) {
+            encontro = buscarLetra(partida, input)
 
-    if ((partida.vidas > 0) && (partida.gano != true)) {
-        encontro = buscarLetra(partida, input)
-
-        if (!encontro) {
-            partida.intentos++;
-            partida.vidas--;
-            mostrarIntentos(input, partida)
+            if (!encontro) {
+                partida.intentos++;
+                partida.vidas--;
+                mostrarIntentos(input, partida)
+            }
         }
     }
     if (partida.gano == true) {
@@ -51,7 +55,7 @@ function celular(input) {
         return 0
     }
 
-    document.querySelector(".board").value = ""
+    //document.querySelector(".board").value = ""
 
 
 
@@ -81,16 +85,24 @@ teclado.addEventListener("keydown", function(e) {
         partida.intentos = 0
         document.getElementById("imagenes").innerHTML = ``
         partida.arrayletras = []
+        partida.letrasPresionadas = []
         partida.rejugar = false
     }
 
     if ((partida.vidas > 0) && (partida.gano != true)) {
-        encontro = buscarLetra(partida, input)
+        console.log(partida.letrasPresionadas)
+        console.log(partida.letrasPresionadas.includes(input))
 
-        if (!encontro) {
-            partida.intentos++;
-            partida.vidas--;
-            mostrarIntentos(input, partida)
+        if (!partida.letrasPresionadas.includes(input)) {
+            partida.letrasPresionadas.push(input)
+            encontro = buscarLetra(partida, input)
+
+            if (!encontro) {
+                partida.intentos++;
+                partida.vidas--;
+                mostrarIntentos(input, partida)
+            }
+
         }
     }
     if (partida.gano == true) {

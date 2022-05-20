@@ -188,6 +188,7 @@ header img {
     /*Fotos del ahorcado o victoria*/
     margin-left: 50vh;
     width: 750px;
+    border: 1px ridge rgb(94, 94, 94);
 }
 
 #palabras {
