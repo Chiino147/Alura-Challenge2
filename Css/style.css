@@ -288,7 +288,7 @@ footer {
 @media screen and (min-width:320px) and (max-width: 480px) {
     /*-------------CELULARES------------*/
     #virtual-keyboard {
-        display: block;
+        display: none;
         width: 60vh;
         height: 18vh;
         margin-top: 0px;
@@ -401,6 +401,49 @@ footer {
         font-size: 20px;
         text-decoration: none;
     }
+    #mostrarMuñeco {
+        margin-left: 20vh;
+        padding: 0;
+        height: 50vh;
+        max-width: 20vh;
+        height: 20vh;
+        background-color: aliceblue;
+    }
+    .conteiner {
+        margin: 1px auto;
+        height: 4vh;
+        width: 8vh;
+    }
+    #palabras {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 60vh;
+        margin: 10px 0px;
+        height: 9vh;
+        border: #0A3871 1px solid;
+        border-radius: 30px;
+    }
+    #equivocadas {
+        height: 3vh;
+        max-width: 60vh;
+    }
+    .letraEquivocada {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #eventoTeclado {
+        display: none;
+        padding: 0px;
+        margin: auto 15vh;
+        height: 35px;
+        width: 60vh;
+        font-size: 30px;
+        border: #0A3871 2px solid;
+        border-radius: 40px;
+    }
     .botonVirtual {
         padding: 10px;
         width: 4vh;
@@ -417,29 +460,6 @@ footer {
     header img {
         width: 5vh;
         border-radius: 20%;
-    }
-    #mostrarMuñeco {
-        margin-left: 20vh;
-        padding: 0;
-        height: 50vh;
-        max-width: 20vh;
-        height: 20vh;
-        background-color: aliceblue;
-    }
-    .conteiner {
-        margin: 1px auto;
-        height: 4vh;
-        width: 8vh;
-    }
-    #eventoTeclado {
-        display: none;
-        padding: 0px;
-        margin: auto 15vh;
-        height: 35px;
-        width: 60vh;
-        font-size: 30px;
-        border: #0A3871 2px solid;
-        border-radius: 40px;
     }
     #botones {
         align-items: center;
@@ -463,26 +483,6 @@ footer {
         padding: 0px;
         width: 60vh;
     }
-    #palabras {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        max-width: 60vh;
-        margin: 10px 0px;
-        height: 9vh;
-        border: #0A3871 1px solid;
-        border-radius: 30px;
-    }
-    #equivocadas {
-        height: 3vh;
-        max-width: 60vh;
-    }
-    .letraEquivocada {
-        font-size: 30px;
-        font-weight: bold;
-    }
 }
 
 @media screen and (min-width:1025px) and (max-width: 1680px) {
@@ -490,6 +490,12 @@ footer {
     header {
         width: 100%;
         height: 8vh;
+    }
+    #virtual-keyboard {
+        display: none!important;
+        width: 60vh;
+        height: 18vh;
+        margin-top: 0px;
     }
     header img {
         width: 4vh;
