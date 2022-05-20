@@ -21,7 +21,7 @@ var partida = {
 function celular(input) {
     cad = ``
 
-    console.log(input)
+
 
     var encontro = false
 
@@ -154,7 +154,7 @@ function buscarLetra(partida, input) {
 
 
             partida.arrayletras = cambiarLetra(partida, input)
-            console.log(partida.arrayletras)
+
 
             mostrarVictoria(partida)
 
@@ -197,14 +197,12 @@ function cambiarLetra(partida, colocarLetra) {
 function mostrarVictoria(partida) {
     //array,palabra,dom
     console.log("verificando..")
-    console.log(`${typeof(partida.arrayletras)} == ${partida.palabra}`)
+
     if ((partida.arrayletras).length == (partida.palabra).length) {
         console.log(partida.palabra)
 
         document.getElementById("imagenes").innerHTML = `<img id="mostrarMuñeco" src="./Img/ahorcado/baseWin.png" alt="">`
-            /*document.getElementById("mensaje").innerHTML = `<div id="victoria">
-            <p>Ganaste!</p>
-            </div>`*/
+
         partida.gano = true
 
     }
@@ -238,7 +236,7 @@ function mostrarLetrasTablero(palabra, cambio) {
     }
     if (cambio == 1) {
         var xd = document.getElementById("palabras")
-        console.log(xd.children)
+
         var i = xd.children.length
         while (i > 0) {
             xd.removeChild(xd.firstChild)
@@ -359,10 +357,8 @@ document.getElementById("btnAdd").addEventListener("click", function() {
 //boton que agrega la palabra
 document.getElementById("btnAgregarPalabra").addEventListener("click", function() {
     var ingreso = document.getElementById("nuevaPalabra").value
-    console.log(ingreso)
     ingreso = ingreso.toUpperCase()
     partida.palabras = insertarNuevasPalabras(partida.palabras, ingreso)
-    console.log(partida.palabras)
     sacarPalabra(1, ingreso)
     cambiarMenu(3)
     cambiarMenu(4)

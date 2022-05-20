@@ -288,26 +288,24 @@ footer {
 @media screen and (min-width:320px) and (max-width: 480px) {
     /*-------------CELULARES------------*/
     #virtual-keyboard {
-        display: inline;
-        align-items: center;
-        max-width: 50vh;
-        height: 22vh;
-        background-color: #5a5a5a;
-        margin-top: 20px;
+        display: block;
+        width: 60vh;
+        height: 18vh;
+        margin-top: 0px;
     }
     .keyboard-row {
-        display: flex;
-        width: 50vh;
-        margin-top: 20px;
+        display: block;
+        margin-top: 30px;
         color: black;
-        font-size: 24px;
+        font-size: 28px;
         text-decoration: none;
     }
     .botonVirtual {
         padding: 4px;
-        width: 2vh;
-        margin: 2px;
+        width: 4vh;
+        margin: 0px;
         border: 2px black solid;
+        border-radius: 30%;
         font-family: Arial;
         color: #000000;
         text-decoration: none;
