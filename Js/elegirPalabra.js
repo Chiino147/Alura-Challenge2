@@ -329,6 +329,7 @@ function cambiarMenu(condicion) {
 var btnGame = document.querySelector("#btnGame")
 btnGame.addEventListener("click", function() {
     partida.palabra = sacarPalabra(0, partida.palabras)
+    document.getElementById("virtual-keyboard").style.display = "block"
     cambiarMenu(1)
     mostrarLetrasTablero(partida.palabra, 0)
 

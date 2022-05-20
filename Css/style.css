@@ -295,15 +295,16 @@ footer {
     }
     .keyboard-row {
         display: block;
+        margin-left: 15px;
         margin-top: 30px;
         color: black;
         font-size: 28px;
         text-decoration: none;
     }
     .botonVirtual {
-        padding: 4px;
+        padding: 3px;
         width: 4vh;
-        margin: 0px;
+        margin: 1px;
         border: 2px black solid;
         border-radius: 30%;
         font-family: Arial;
