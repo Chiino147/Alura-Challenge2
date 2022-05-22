@@ -189,6 +189,7 @@ header img {
     margin-left: 50vh;
     width: 750px;
     border: 1px ridge rgb(94, 94, 94);
+    transition: 2sg;
 }
 
 #palabras {
@@ -286,6 +287,10 @@ footer {
     opacity: 0%;
 }
 
+.botonVirtual:hover {
+    transition: (black, 5s);
+}
+
 @media screen and (min-width:320px) and (max-width: 480px) {
     /*-------------CELULARES------------*/
     #virtual-keyboard {
@@ -313,7 +318,7 @@ footer {
         text-decoration: none;
     }
     .botonVirtual:hover {
-        color: aqua;
+        color: #0A3871;
         font-weight: bold;
     }
     #mostrarMuñeco {
@@ -508,7 +513,6 @@ footer {
         padding: 0;
         width: auto;
         height: 100%;
-        background-color: aliceblue;
     }
     #imagenes {
         margin: 0px;

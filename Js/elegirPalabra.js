@@ -5,7 +5,7 @@ var partida = {
     vidas: 9,
     intentos: 0,
     gano: false,
-    palabras: ["CAMA", "MAESTRA", "ESCUDO", "TERCIARIO", "MUSEO", "COPA", "CASA", "VERDE", "MENTIRA", "OSO", "ARGENTINA", "PERSONA", "PELO", "AGUA", "BANANA", "MOTO", "PERRO", ],
+    palabras: ["CAMA", "MAESTRA", "MEDICO", "APRENDIZAJE", "MUSEO", "COPA", "CASA", "VERDE", "PEZ", "OSO", "ARGENTINA", "GATO", "CHOCOLATE", "AGUA", "BANANA", "MOTO", "PERRO", "MANZANA", "OTORRINOLARINGOLO", "PELOTA", "NARANJA", "AVION", "DINERO", "ROJO", "CORAZON"],
     palabra: "",
     arrayletras: [],
     rejugar: false,
@@ -46,6 +46,9 @@ function celular(input) {
                 mostrarIntentos(input, partida)
             }
         }
+    } else {
+        console.log("Repetido")
+
     }
     if (partida.gano == true) {
         return 0
@@ -76,7 +79,7 @@ teclado.addEventListener("keydown", function(e) {
     var input = e.key
     input = input.toUpperCase();
     var encontro = false
-
+    var letraRepetida = ""
 
 
     if (partida.rejugar == true) {
@@ -92,8 +95,9 @@ teclado.addEventListener("keydown", function(e) {
     if ((partida.vidas > 0) && (partida.gano != true)) {
         console.log(partida.letrasPresionadas)
         console.log(partida.letrasPresionadas.includes(input))
-
+        letraRepetida = partida.letrasPresionadas.includes(input)
         if (!partida.letrasPresionadas.includes(input)) {
+
             partida.letrasPresionadas.push(input)
             encontro = buscarLetra(partida, input)
 
@@ -104,6 +108,7 @@ teclado.addEventListener("keydown", function(e) {
             }
 
         }
+
     }
     if (partida.gano == true) {
         return 0
@@ -268,10 +273,12 @@ function mostrarIntentos(input, partida) {
     console.log(`Vida actual = ${partida.vidas}`)
     cad0 = ``
     partida.letraIncorrectas.push(input)
+
+
     if (partida.vidas >= 0) {
 
         for (i in partida.letraIncorrectas) {
-            cad0 += `<div  id="${input}" class="letraEquivocada"> ${partida.letraIncorrectas[i]} - </div>`
+            cad0 += `<p  id="${input}" class="letraEquivocada"> ${partida.letraIncorrectas[i]} - </p>`
         }
 
         document.getElementById("equivocadas").innerHTML = cad0
@@ -283,10 +290,11 @@ function mostrarIntentos(input, partida) {
     }
 }
 
-function reinicarPartida() {
+function reinicarPartida(partida) {
+    console.log(partida.letrasPresionadas)
     document.getElementById("eventoTeclado").value = "";
     document.getElementById("equivocadas").innerHTML = ""
-    document.getElementById("imagenes").innerHTML = ""
+    document.getElementById("imagenes").innerHTML = ` <img id="mostrarMuñeco" src="./Img/ahorcado/base0.png" alt="">`
     var nuevoArray = []
     var rejugar = true
     var empezar = false
@@ -355,7 +363,7 @@ document.getElementById("btnCancelGame").addEventListener("click", function() {
 
 //Rejugar
 document.getElementById("btnNewGame").addEventListener("click", function() {
-    reinicarPartida()
+    reinicarPartida(partida)
 
 })
 
@@ -371,17 +379,25 @@ document.getElementById("btnAdd").addEventListener("click", function() {
 document.getElementById("btnAgregarPalabra").addEventListener("click", function() {
     var ingreso = document.getElementById("nuevaPalabra").value
     ingreso = ingreso.toUpperCase()
-    partida.palabras = insertarNuevasPalabras(partida.palabras, ingreso)
-    sacarPalabra(1, ingreso)
-    cambiarMenu(3)
-    cambiarMenu(4)
+    console.log(ingreso.length)
+    if (ingreso.length < 15) {
+        partida.palabras = insertarNuevasPalabras(partida.palabras, ingreso)
+        sacarPalabra(1, ingreso)
+        cambiarMenu(3)
+        cambiarMenu(4)
+    } else {
+
+        alert("Palabra muy grande")
+    }
+
+
 
 })
 
 //Nuevo juego
 var btnCancel = document.querySelector("#btnCancelGame")
 btnCancel.addEventListener("click", function() {
-    reinicarPartida()
+    reinicarPartida(partida)
 })
 
 //Focus en la pantalla
