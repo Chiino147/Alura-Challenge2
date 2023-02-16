@@ -1,0 +1,321 @@
+@media screen and (max-width: 767px) {
+    /*-------------CELULARES------------*/
+    header {
+        width: 100%;
+        height: 10vh;
+    }
+    header img {
+        width: 70%;
+        border-radius: 20%;
+    }
+    footer {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    #virtual-keyboard {
+        display: none;
+        width: 100%;
+        height: 250px;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .keyboard-row {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        color: black;
+        font-size: 28px;
+        text-decoration: none;
+    }
+    .botonVirtual {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        width: 30px;
+        border: 2px black solid;
+        border-radius: 30%;
+        font-family: Arial;
+        color: #000000;
+        text-decoration: none;
+    }
+    .botonVirtual:hover {
+        color: #0A3871;
+        font-weight: bold;
+    }
+    #mostrarMuñeco {
+        margin-left: 15%;
+        padding: 0;
+        max-width: 35vh;
+        height: 20vh;
+    }
+    .conteiner {
+        margin: px auto;
+        height: 30px;
+        width: 35px;
+    }
+    #eventoTeclado {
+        display: none;
+        padding: 0px;
+        margin-left: 8vh;
+        height: 0px;
+        width: 40vh;
+        font-size: 35px;
+        border: #0A3871 2px solid;
+        border-radius: 40px;
+    }
+    #palabras {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        margin: 10px 0px;
+        height: 9vh;
+        border: #0A3871 1px solid;
+        border-radius: 30px;
+    }
+    #equivocadas {
+        height: 5vh;
+    }
+    .letraEquivocada {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #botones {
+        align-items: center;
+        margin: 3px auto;
+        padding: 0px;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+    }
+    #btnNewGame {
+        width: 120px;
+        margin: 0px 5%;
+    }
+    #btnCancelGame {
+        width: 120px;
+        margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    /*-------------Tablets------------*/
+    header {
+        width: 100%;
+        height: 10vh;
+    }
+    header img {
+        width: 70%;
+        border-radius: 20%;
+    }
+    footer {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    #virtual-keyboard {
+        display: none;
+        width: 100%;
+        height: 250px;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .keyboard-row {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        margin-top: 80px;
+        color: black;
+        font-size: 28px;
+        text-decoration: none;
+    }
+    .botonVirtual {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        width: 50px;
+        height: 50px;
+        border: 2px black solid;
+        border-radius: 30%;
+        font-family: Arial;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+    }
+    .botonVirtual:hover {
+        color: #0A3871;
+        font-weight: bold;
+    }
+    #muñeco {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    #mostrarMuñeco {
+        margin: 0px;
+        padding: 0px;
+        width: 50%;
+        height: 20vh;
+    }
+    #palabras {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 9vh;
+        border: #0A3871 1px solid;
+        border-radius: 30px;
+    }
+    #equivocadas {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .letraEquivocada {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    #botones {
+        align-items: center;
+        margin: 3px auto;
+        padding: 0px;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+    }
+    #btnNewGame {
+        width: 180px;
+        margin: 0px 5%;
+        margin-bottom: 15px;
+    }
+    #btnCancelGame {
+        width: 180px;
+        margin: 0px 5px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /*-------------Pantallas------------*/
+    header {
+        width: 100%;
+        height: 10vh;
+    }
+    header img {
+        width: 70%;
+        border-radius: 20%;
+    }
+    footer {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    #virtual-keyboard {
+        display: none;
+        width: 100%;
+        height: 250px;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .keyboard-row {
+        display: none;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        width: 0px;
+        height: 0px;
+        color: black;
+        font-size: 28px;
+        text-decoration: none;
+    }
+    .botonVirtual {
+        display: flex;
+        justify-content: center;
+        width: 0px;
+        height: 0px;
+        height: 0px;
+        border: 2px black solid;
+        border-radius: 30%;
+        font-family: Arial;
+        color: #000000;
+        text-decoration: none;
+        text-align: center;
+    }
+    #muñeco {
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    #mostrarMuñeco {
+        margin: 0px;
+        padding: 0px;
+        width: 50%;
+        height: 26vh;
+    }
+    #palabras {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 9vh;
+        border: #0A3871 1px solid;
+        border-radius: 30px;
+    }
+    #equivocadas {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #botones {
+        align-items: center;
+        margin: 3px auto;
+        padding: 0px;
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+    }
+    #btnNewGame {
+        width: 180px;
+        margin: 0px 5%;
+        margin-bottom: 15px;
+    }
+    #btnCancelGame {
+        width: 180px;
+        margin: 0px 5px;
+        margin-bottom: 15px;
+    }
+}

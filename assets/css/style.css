@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.mostrarJuego {
+    display: 100%;
+}
+
+.mostrarAgregar {
+    display: 100%;
+    height: 300px;
+    margin: 30px;
+}
+
+#nuevaPalabra {
+    width: 200px;
+}
+
+#new {
+    font-size: 34px;
+}
+
+#virtual-keyboard {
+    display: none;
+}
+
+
+/*Boton para agregar palabras a la lista*/
+
+#btnAgregarPalabra {
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+    margin: 5% auto;
+    padding: 0px;
+    border: none;
+    color: rgba(255, 255, 255, 0.795);
+    background-color: #0A3871;
+}
